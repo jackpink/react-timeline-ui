@@ -1,6 +1,6 @@
 {
   "name": "react-timeline-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A selectable timeline UI component for use in React",
   "scripts": {
     "rollup": "rollup -c",
@@ -34,9 +34,6 @@
   ],
   "types": "dist/index.d.ts",
   "type": "module",
-  "peerDependencies": {
-    "react": "^18.2.0"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/jackpink/react-timeline-ui.git"
