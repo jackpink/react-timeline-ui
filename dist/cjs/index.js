@@ -17,8 +17,6 @@ function $96e13bca1d847433$var$ensure(argument, message = "This value was promis
 const $96e13bca1d847433$var$updateItemStates = (eventStates, id)=>{
     // get current state
     const newEventStates = JSON.parse(JSON.stringify(eventStates));
-    console.log("updateItemStates");
-    console.log(id);
     const currentState = $96e13bca1d847433$var$ensure(newEventStates.find((i)=>i.id === id)).state;
     // toggle state
     if (currentState === "CHECKED") //change to unchecked
@@ -32,7 +30,6 @@ const $96e13bca1d847433$var$Element = (props)=>{
     const checked = event.state === "CHECKED";
     const onClick = ()=>{
         const newEventState = $96e13bca1d847433$var$updateItemStates(eventStates, event.id);
-        console.log("set event states to ", newEventState);
         setEventStates(newEventState);
     };
     return /*#__PURE__*/ (0, $6FeVr$jsxs)("div", {
@@ -70,10 +67,41 @@ let $70cfb7adee0823b4$export$7254cc27399e90bd;
     State["checked"] = "CHECKED";
     State["unchecked"] = "UNCHECKED";
 })($70cfb7adee0823b4$export$7254cc27399e90bd || ($70cfb7adee0823b4$export$7254cc27399e90bd = {}));
+let $70cfb7adee0823b4$var$eventStatesDefaultProps = [
+    {
+        label: "First Event",
+        id: 1,
+        state: $70cfb7adee0823b4$export$7254cc27399e90bd.checked
+    },
+    {
+        label: "next Event",
+        id: 2,
+        state: $70cfb7adee0823b4$export$7254cc27399e90bd.checked
+    },
+    {
+        label: "Add Your Own",
+        id: 3,
+        state: $70cfb7adee0823b4$export$7254cc27399e90bd.checked
+    },
+    {
+        label: "Events As",
+        id: 5,
+        state: $70cfb7adee0823b4$export$7254cc27399e90bd.checked
+    },
+    {
+        label: "Props",
+        id: 6,
+        state: $70cfb7adee0823b4$export$7254cc27399e90bd.checked
+    }
+];
+const $70cfb7adee0823b4$var$setEventStatesDefaultProps = (newEventStates)=>{
+    $70cfb7adee0823b4$var$eventStatesDefaultProps = newEventStates;
+    console.log(newEventStates);
+};
 const $70cfb7adee0823b4$var$Timeline = (props)=>{
     //const {label = "timeline"} = props;
-    const { eventStates: eventStates  } = props;
-    const { setEventStates: setEventStates  } = props;
+    const { eventStates: eventStates = $70cfb7adee0823b4$var$eventStatesDefaultProps  } = props;
+    const { setEventStates: setEventStates = $70cfb7adee0823b4$var$setEventStatesDefaultProps  } = props;
     return /*#__PURE__*/ (0, $6FeVr$jsx)("ul", {
         className: "tw-table tw-w-full",
         children: eventStates.map((event)=>{
