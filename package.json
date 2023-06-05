@@ -1,6 +1,6 @@
 {
   "name": "react-timeline-ui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A selectable timeline UI component for use in React",
   "scripts": {
     "rollup": "rollup -c",
