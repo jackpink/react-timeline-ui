@@ -1,1 +1,0 @@
-{"mappings":"AC8CE,wBAAwB","sources":["src/src/Element.tsx","src/src/Timeline.tsx","src/src/index.ts","src/index.ts"],"sourcesContent":[null,null,null,"import Timeline from \"./Timeline\";\n\nexport { Timeline };"],"names":[],"version":3,"file":"index.d.ts.map"}
