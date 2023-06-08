@@ -15,7 +15,6 @@ export interface EventObj {
 
 
 export interface TimelineProps {
-  label: string,
   eventStates: EventObj[],
   setEventStates: Function
 }
